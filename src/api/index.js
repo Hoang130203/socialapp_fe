@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-export const BASE_URL = 'http://localhost:4070';
+// export const BASE_URL = 'http://localhost:4070';
+export const BASE_URL = 'https://socialapp.maiminhhoang.id.vn';
+
 
 export const getAuthHeader = () => {
     const token = localStorage.getItem('token');
