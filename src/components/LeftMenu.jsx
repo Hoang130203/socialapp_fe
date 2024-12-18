@@ -3,15 +3,18 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import moment from "moment";
 import { faker } from "@faker-js/faker";
 import { KeyboardArrowUp } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 const sideData = [
     {
         image: "https://i.postimg.cc/qq7ZhQ3t/XF4-FQcre-i.png",
         name: "Bạn bè",
+        path: "/friends",
     },
     {
         image: "https://i.postimg.cc/5twrZXJt/mk4d-H3-FK0j-T.png",
         name: "Nhóm",
+        path: "/groups",
     },
     {
         image: "https://i.postimg.cc/HxzhkFVD/9-BDq-Qfl-Vf-XI.png",
@@ -20,6 +23,7 @@ const sideData = [
     {
         image: "https://i.postimg.cc/WzfYMrG5/A1-Hl-I2-LVo58.png",
         name: "Video",
+        path: "/watch",
     },
     {
         image: "https://i.postimg.cc/63tPwB6f/AYj2837-Mmg-X.png",
@@ -102,7 +106,7 @@ function LeftMenu() {
     const navigate = useNavigate();
     const handleChangePage = () => {
         // router.push("/create");
-        navigate('/profile')
+        navigate('/profile/' + user.userId);
     };
     return (
         <div className="overflow-scroll overflow-x-hidden xl:block fixed h-screen overflow-y-auto bg-[#f7f7f7] dark:bg-[#18191a]  scrollbar-hide w-1/5 pt-10  hidden  flex-col  hover:scrollbar-thin  hover:scrollbar-thumb-slate-400 hover:scrollbar-default">
@@ -114,11 +118,11 @@ function LeftMenu() {
                             className="flex items-center space-x-2 p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third dark:hover:text-white cursor-pointer"
                         >
                             <img
-                                src={user?.photoURL || "https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q"}
+                                src={user?.profilePictureUrl || "https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q"}
                                 alt="Profile picture"
                                 className="w-8 h-8 rounded-full object-cover"
                             />
-                            <span className="font-semibold dark:text-white">{user?.displayName}</span>
+                            <span className="font-semibold dark:text-white">{user?.fullName}</span>
                         </div>
                     ) : (
                         <div
@@ -139,14 +143,16 @@ function LeftMenu() {
                         {sideData.slice(0, showAllSideData ? sideData.length : 6)
                             .map((data, index) => (
                                 <li key={index}>
-                                    <div className="flex items-center cursor-pointer space-x-2 p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
-                                        <img
-                                            src={data.image}
-                                            alt="Profile picture"
-                                            className="w-8 h-8 rounded-full"
-                                        />
-                                        <span className="font-semibold dark:text-white text-[14px]">{data.name}</span>
-                                    </div>
+                                    <Link to={data?.path || "#"}>
+                                        <div className="flex items-center cursor-pointer space-x-2 p-2 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition-all dark:text-dark-txt dark:hover:bg-dark-third">
+                                            <img
+                                                src={data.image}
+                                                alt="Profile picture"
+                                                className="w-8 h-8 rounded-full"
+                                            />
+                                            <span className="font-semibold dark:text-white text-[14px]">{data.name}</span>
+                                        </div>
+                                    </Link>
                                 </li>
                             ))}
 

@@ -6,19 +6,36 @@ import Button from '../../components/button/Button';
 import { TextInput } from '../../components/input/TextInput';
 import { TEInput, TERipple } from "tw-elements-react";
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
-
+import { authApi } from '../../api';
 const Content = () => {
     const fieldValidationSchema = yup.object({
         emailOrPhone: yup.string().required('Email or phone required'),
         password: yup.string().required('Password required'),
     });
     const navigate = useNavigate();
-    const handleLogin = (values) => {
-        // console.log(values);
-        localStorage.setItem(
-            'user', '{"displayName":"Mai Minh Hoàng","photoURL":"https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q","uid":"123456"}'
-        )
-        window.location.href = "/";
+    const [emailOrPhone, setEmailOrPhone] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const handleLogin = async () => {
+        try {
+            // Call the login API
+            const response = await authApi.login(
+                emailOrPhone, // Username/email/phone
+                password
+            );
+
+            // If login successful, store the token
+            if (response.token) {
+                localStorage.setItem('token', response.token);
+                // Store user info
+                localStorage.setItem('user', JSON.stringify(response.userProfile));
+                // Redirect to home page
+                window.location.href = "/";
+            }
+        } catch (error) {
+            // Handle login error
+            console.error("Login failed:", error);
+            // You may want to show an error message to the user
+        }
     }
     return (
         <section className="h-screen p-[5%] bg-[#f7f7f7] dark:bg-[#18191a]">
@@ -42,7 +59,7 @@ const Content = () => {
                                 label="Tài khoản/ Sđt/ Email"
                                 size="lg"
                                 className="mb-6"
-
+                                onChange={(e) => setEmailOrPhone(e.target.value)}
                             ></TEInput>
 
                             {/* <!--Password input--> */}
@@ -51,6 +68,7 @@ const Content = () => {
                                 label="Mật khẩu"
                                 className="mb-6"
                                 size="lg"
+                                onChange={(e) => setPassword(e.target.value)}
                             ></TEInput>
 
                             {/* <!-- Remember me checkbox --> */}

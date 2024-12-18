@@ -1,49 +1,177 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CreatePostBox from './CreatePostBox';
 import PostContainer from './PostContainer';
 import { faker } from '@faker-js/faker';
 import PostForm from '../../components/PostForm';
 import Feed from '../../components/Feed';
+import { useParams } from 'react-router-dom';
+import { CameraIcon } from 'lucide-react';
+import { BASE_URL, profileApi } from '../../api';
+import ImageUploadModal from './ImageUploadModal';
 // import { TPostView } from '../../types/post';
 
 const ProfilePage = () => {
+  const { id } = useParams();
   const [postsView, setPostsView] = useState('listView');
+  const [currentUser, setCurrentUser] = useState(null);
+  const [profileData, setProfileData] = useState(null);
+  const [isOwnProfile, setIsOwnProfile] = useState(false);
+  const [isHoveringCover, setIsHoveringCover] = useState(false);
+  const [isHoveringProfile, setIsHoveringProfile] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [isAvatarModalOpen, setIsAvatarModalOpen] = useState(false);
+  const [isBackgroundModalOpen, setIsBackgroundModalOpen] = useState(false);
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        setLoading(true);
+        const response = await profileApi.getProfileById(id);
+        if (response?.avatarUrl?.startsWith("/files")) {
+          response.avatarUrl = `${BASE_URL}${response.avatarUrl}`;
+
+        }
+        if (response?.profileBackgroundUrl?.startsWith("/files")) {
+          response.profileBackgroundUrl = `${BASE_URL}${response.profileBackgroundUrl}`;
+
+        }
+        setProfileData(response);
+        setError(null);
+      } catch (err) {
+        setError('Failed to load profile data');
+        console.error('Error fetching profile:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Get logged in user from localStorage
+    const loggedInUser = JSON.parse(localStorage.getItem('user'));
+    setCurrentUser(loggedInUser);
+    setIsOwnProfile(loggedInUser?.userId === id)
+
+    fetchProfile();
+  }, [id]);
+  useEffect(() => {
+    if (profileData) {
+      const loggedInUser = JSON.parse(localStorage.getItem('user'));
+
+      if (loggedInUser?.userId === id) {
+        var user = JSON.parse(localStorage.getItem('user'));
+        user.profilePictureUrl = profileData?.avatarUrl || user.profilePictureUrl;
+        user.profileBackgroundUrl = profileData?.profileBackgroundUrl || user.profileBackgroundUrl;
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+    }
+  }, [profileData])
+  const handleEditProfile = () => {
+    // Handle profile edit
+    // setIsAvatarModalOpen(true);
+    console.log('Editing profile');
+  };
+
+  const handleEditCover = () => {
+    setIsBackgroundModalOpen(true);
+
+    console.log('Editing cover photo');
+  };
+
+  const handleEditProfilePicture = () => {
+    setIsAvatarModalOpen(true);
+    console.log('Editing profile picture');
+  };
+  const handleImageUpdate = async (newUrl, type) => {
+    try {
+      // Update local state
+      setProfileData(prev => ({
+        ...prev,
+        [type === 'avatar' ? 'avatarUrl' : 'profileBackgroundUrl']: newUrl
+      }));
+    } catch (error) {
+      console.error('Error updating profile image:', error);
+    }
+  };
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-[#f7f7f7] dark:bg-[#18191a]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-[#f7f7f7] dark:bg-[#18191a]">
+        <div className="text-red-500 dark:text-red-400">{error}</div>
+      </div>
+    );
+  }
   return (
     <div className="h-full w-full ">
       <div className="h-auto w-full bg-[#f7f7f7] dark:bg-[#18191a]">
+        <ImageUploadModal
+          isOpen={isAvatarModalOpen}
+          onClose={() => setIsAvatarModalOpen(false)}
+          onUpload={(url) => handleImageUpdate(url, 'avatar')}
+          type="avatar"
+        />
+
+        <ImageUploadModal
+          isOpen={isBackgroundModalOpen}
+          onClose={() => setIsBackgroundModalOpen(false)}
+          onUpload={(url) => handleImageUpdate(url, 'background')}
+          type="background"
+        />
         <div className="mx-auto h-full max-w-6xl rounded-md  dark:bg-neutral-800">
           <div
             className="relative h-[28.75rem] max-h-[28.75rem] w-full rounded-lg"
             style={{
-              backgroundImage: `url('https://images3.alphacoders.com/132/1322308.jpeg')`,
+              backgroundImage: profileData?.profileBackgroundUrl?.length > 0 ? `url('${profileData?.profileBackgroundUrl}')` : `url('https://images3.alphacoders.com/132/1322308.jpeg')`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
+            onMouseEnter={() => isOwnProfile && setIsHoveringCover(true)}
+            onMouseLeave={() => isOwnProfile && setIsHoveringCover(false)}
           >
             <div
               className="absolute flex w-full items-center justify-center"
               style={{ bottom: '-15px' }}
             >
               <div className="absolute bottom-[30px] right-[30px]">
-                <button className="rounded-md bg-white px-3 py-2 text-sm font-semibold hover:bg-gray-50 focus:outline-none">
-                  <i className="fas fa-camera mr-2"></i>Chỉnh sửa
-                </button>
+                {isOwnProfile && isHoveringCover && (
+                  <button
+                    onClick={handleEditCover}
+                    className="rounded-md bg-white px-3 py-2 text-sm font-semibold hover:bg-gray-50 focus:outline-none">
+                    <i className="fas fa-camera mr-2"></i>Chỉnh sửa
+                  </button>
+                )}
               </div>
             </div>
           </div>
           <div className="mx-auto h-full px-10">
             <div className="flex items-end gap-5 border-b pb-5 dark:border-stone-700">
-              <div className="z-10 -mt-8 h-[10.25rem] w-[10.25rem]">
+              <div className="z-10 -mt-8 h-[10.25rem] w-[10.25rem] relative"
+                onMouseEnter={() => isOwnProfile && setIsHoveringProfile(true)}
+                onMouseLeave={() => isOwnProfile && setIsHoveringProfile(false)}
+              >
                 <img
                   className="h-full w-full rounded-full border-4 border-primary object-cover"
-                  src="https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q"
+                  src={profileData?.avatarUrl?.length > 0 ? `${profileData?.avatarUrl}` : "https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q"}
                   alt="dp"
                 />
+                {isOwnProfile && isHoveringProfile && (
+                  <button
+                    onClick={handleEditProfilePicture}
+                    className="absolute bottom-2 right-2 rounded-full bg-white p-2 shadow-md hover:bg-gray-100"
+                  >
+                    <CameraIcon className="h-5 w-5 text-gray-700" />
+                  </button>
+                )}
               </div>
               <div className="flex-1 flex-col pb-2">
                 <p className="text-[2rem] font-bold text-black dark:text-gray-200">
-                  Mai Minh Hoàng
+                  {profileData?.fullName}
                 </p>
                 <a className="cursor-pointer text-sm font-semibold text-gray-600 hover:underline dark:text-gray-300">
                   528 bạn bè
@@ -61,17 +189,21 @@ const ProfilePage = () => {
                       ))
                     }
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <button className="rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none">
-                      <i className="fas fa-plus-circle mr-2"></i>Add to Story
-                    </button>
-                    <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
-                      <i className="fas fa-pen mr-2"></i>Sửa trang cá nhân
-                    </button>
-                    <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
-                      <i className="fas fa-ellipsis-h"></i>
-                    </button>
-                  </div>
+                  {
+                    isOwnProfile && (
+                      <div className="flex items-center space-x-2">
+                        <button className="rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none">
+                          <i className="fas fa-plus-circle mr-2"></i>Add to Story
+                        </button>
+                        <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
+                          <i className="fas fa-pen mr-2"></i>Sửa trang cá nhân
+                        </button>
+                        <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
+                          <i className="fas fa-ellipsis-h"></i>
+                        </button>
+                      </div>
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -123,12 +255,14 @@ const ProfilePage = () => {
                     rel="noreferrer"
                     className="text-sm text-primary hover:underline"
                   >
-                    https://maiminhhoang.com
+                    {profileData?.email}
                   </a>
                 </div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
-                  Sửa tiểu sử
-                </button>
+                {isOwnProfile && (
+                  <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
+                    Sửa tiểu sử
+                  </button>
+                )}
               </div>
               <div className="flex flex-col space-y-4 text-sm">
                 <div className="flex items-center space-x-2">
@@ -202,13 +336,13 @@ const ProfilePage = () => {
                   </a>
                 </div>
               </div>
-
-              <div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
-                  Chỉnh sửa chi tiết
-                </button>
-              </div>
-
+              {isOwnProfile && (
+                <div>
+                  <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
+                    Chỉnh sửa chi tiết
+                  </button>
+                </div>
+              )}
               <div className="flex items-center gap-3">
                 <img
                   className="cursor-pointer rounded-lg"
@@ -228,9 +362,11 @@ const ProfilePage = () => {
               </div>
 
               <div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
-                  Thêm nội dung đáng chú ý
-                </button>
+                {isOwnProfile &&
+                  <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
+                    Thêm nội dung đáng chú ý
+                  </button>
+                }
               </div>
             </div>
             <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 dark:text-gray-200 shadow dark:bg-neutral-800">
@@ -390,7 +526,9 @@ const ProfilePage = () => {
           </div>
           <div className="col-span-3 " >
             {/* Create post */}
-            <PostForm isShow={true} />
+            {isOwnProfile &&
+              <PostForm isShow={true} />
+            }
             {/* post filter box */}
             <div className="mt-4 rounded-md bg-white p-2 px-3 text-sm shadow dark:bg-neutral-800">
               <div className="flex items-center justify-between border-b pb-2 dark:border-neutral-700">

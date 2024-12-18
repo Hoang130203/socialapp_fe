@@ -43,7 +43,7 @@ const NavBar = ({
 
   const [user, setUser] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("user");
+      return JSON.parse(localStorage.getItem("user"));
     }
   });
   // const router = useRouter();
@@ -72,12 +72,7 @@ const NavBar = ({
     await setUser(null);
   };
   const handleSignin = () => {
-    localStorage.setItem("user", JSON.stringify({
-      displayName: "Mai Minh Hoàng",
-      photoURL: "https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q",
-      uid: "123456",
-    }));
-    setUser(true);
+    window.location.href = "/login";
   }
   const navigate = useNavigate();
   return (
@@ -326,7 +321,7 @@ const NavBar = ({
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      onClick={() => setIsMessenger(true)}
+                      onClick={() => navigate('/messages')}
                       className="text-xl  xl:grid place-items-center bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-white  rounded-full mx-1 p-3 cursor-pointer hover:bg-gray-300 relative"
                     >
                       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -356,7 +351,9 @@ const NavBar = ({
                   id="dark-mode-toggle"
                 >
                   <img
-                    src='https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q'
+                    src={
+                      user?.profilePictureUrl?.length > 10 ? user?.profilePictureUrl :
+                        'https://i.ytimg.com/vi/KJ78T9BrnFM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA00OWvTfeI-aVK8i4JKDiUQdbZ3Q'}
                     alt="Profile picture"
                     className="rounded-full h-11 w-11 object-cover ring-1 dark:ring-2"
                   />

@@ -1,0 +1,836 @@
+[{
+  "_id": {
+    "$oid": "66aae9f7904497730a5487aa"
+  },
+  "slug": "block-tnt-blast",
+  "title": "Block TNT Blast",
+  "description": "Block TNT Blast is an exciting sandbox simulation game that will ignite your imagination and strategic skills. In this game, players are tasked with strategically placing bombs to demolish various objects and earn diamonds. These diamonds are then used to unlock a wide range of powerful bombs, adding to the explosive mayhem. With its captivating gameplay and stunning graphics, Block TNT Blast offers endless hours of entertainment for players of all ages.",
+  "assets": [
+    {
+      "$oid": "66aae9f6904497730a5487a0"
+    },
+    {
+      "$oid": "66aae9f6904497730a5487a1"
+    },
+    {
+      "$oid": "66aae9f6904497730a5487a2"
+    },
+    {
+      "$oid": "66aae9f6904497730a5487a3"
+    },
+    {
+      "$oid": "66aae9f6904497730a5487a4"
+    }
+  ],
+  "category": "Simulation",
+  "tags": [
+    "bomb",
+    "boy",
+    "idle",
+    "minecraft",
+    "pixel",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "008f3e2291824a30957bee2f91951b01",
+  "description_vi": "Block TNT Blast là một trò chơi mô phỏng hộp cát thú vị sẽ khơi dậy trí tưởng tượng và kỹ năng chiến lược của bạn. Trong trò chơi này, người chơi có nhiệm vụ đặt bom một cách chiến lược để phá hủy các vật thể khác nhau và kiếm kim cương. Những viên kim cương này sau đó được sử dụng để mở khóa nhiều loại bom mạnh mẽ, làm tăng thêm tình trạng hỗn loạn bùng nổ. Với lối chơi hấp dẫn và đồ họa tuyệt đẹp, Block TNT Blast mang đến những giờ giải trí bất tận cho người chơi ở mọi lứa tuổi.",
+  "created_at": {
+    "$date": "2024-08-01T01:50:47.220Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9f8904497730a5487bc"
+  },
+  "slug": "idle-trade-isle",
+  "title": "Idle Trade Isle",
+  "description": "Idle Trade Isle is a casual simulation game. Let's go on an island adventure on the sea! You are a captain, driving a boat to the mysterious island group. Each island has different natural resources that need to be collected. After collecting them, go back to your own island to build and upgrade them.  Enjoy!",
+  "assets": [
+    {
+      "$oid": "66aae9f7904497730a5487b2"
+    },
+    {
+      "$oid": "66aae9f7904497730a5487b3"
+    },
+    {
+      "$oid": "66aae9f7904497730a5487b4"
+    },
+    {
+      "$oid": "66aae9f7904497730a5487b5"
+    },
+    {
+      "$oid": "66aae9f7904497730a5487b6"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "business",
+    "idle",
+    "island",
+    "wood",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "da8cd489a75b4777b03b0008d4e9de95",
+  "description_vi": "Idle Trade Isle là một game mô phỏng thông thường. Hãy cùng thực hiện một cuộc phiêu lưu trên đảo trên biển! Bạn là thuyền trưởng, lái con thuyền đến quần đảo bí ẩn. Mỗi hòn đảo có những tài nguyên thiên nhiên khác nhau cần được khai thác. Sau khi thu thập chúng, hãy quay trở lại hòn đảo của riêng bạn để xây dựng và nâng cấp chúng.  Thưởng thức!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:48.173Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9f8904497730a5487cf"
+  },
+  "slug": "extreme-run-3d",
+  "title": "Extreme Run 3D",
+  "description": "Get ready for an adrenaline-pumping, heart-racing experience with Extreme Run 3D! This high-octane endless runner game is designed to push your limits and test your reflexes in a thrilling three-dimensional world.",
+  "assets": [
+    {
+      "$oid": "66aae9f8904497730a5487c3"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487c4"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487c5"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487c6"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487c7"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487c8"
+    }
+  ],
+  "category": "Agility",
+  "tags": [
+    "ball",
+    "endless",
+    "run",
+    "running",
+    "speed"
+  ],
+  "views": 0,
+  "company": "AlienWebGames",
+  "gameMd5": "332fed0d374c4401934cf5b19b7a85b1",
+  "description_vi": "Hãy sẵn sàng cho trải nghiệm thót tim, hồi hộp với Extreme Run 3D! Trò chơi chạy vô tận có chỉ số octan cao này được thiết kế để vượt qua giới hạn của bạn và kiểm tra phản xạ của bạn trong một thế giới ba chiều ly kỳ.",
+  "created_at": {
+    "$date": "2024-08-01T01:50:48.459Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9f8904497730a5487eb"
+  },
+  "slug": "mine-and-slash",
+  "title": "Mine & Slash",
+  "description": "Embark on an epic RPG quest, as you dig and explore your way through a rougelite 3D world filled with magic and adventure.\n\nFeatures:\n- Explore multiple mines\n- Upgrade your equipment to get more deadly and effective\n- Fight and defeat imposing bosses\n- Discover new content and surprises in many upcoming updates\n\nAs a miner, you have the unique opportunity to collect gold and valuable resources as you dig deeper and deeper into the dungeon. Unlock powerful skills to become even stronger!\n",
+  "assets": [
+    {
+      "$oid": "66aae9f8904497730a5487d7"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487d8"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487d9"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487da"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487db"
+    }
+  ],
+  "category": "Adventure",
+  "tags": [
+    "minecraft",
+    "dwarf",
+    "crystal",
+    "crafting",
+    "dig"
+  ],
+  "views": 0,
+  "company": "Boombit S.A.",
+  "gameMd5": "d9f2085b13234efea9c5ef6bbc1cd998",
+  "description_vi": "Bắt tay vào một nhiệm vụ RPG hoành tráng, khi bạn đào bới và khám phá con đường của mình trong thế giới 3D rougelite tràn ngập phép thuật và phiêu lưu.\n\nĐặc trưng:\n- Khám phá nhiều mỏ\n- Nâng cấp thiết bị của bạn để trở nên nguy hiểm và hiệu quả hơn\n- Chiến đấu và đánh bại những tên trùm hùng mạnh\n- Khám phá nội dung mới và bất ngờ trong nhiều bản cập nhật sắp tới\n\nLà một thợ mỏ, bạn có cơ hội duy nhất để thu thập vàng và các tài nguyên có giá trị khi bạn ngày càng đào sâu hơn vào ngục tối. Mở khóa các kỹ năng mạnh mẽ để trở nên mạnh mẽ hơn nữa!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:48.805Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9f9904497730a548807"
+  },
+  "slug": "crystal-connect",
+  "title": "Crystal Connect",
+  "description": "Discover the enchanting world of Crystal Connect, a captivating game with breathtaking graphics! Join a pair of dwarves on an epic quest to collect precious crystals and navigate through dozens of challenging levels in this immersive connect-style adventure game. Connect pairs of gems, create powerful combinations and pave your way to victory. Dive into the adventure today and discover the magic of Crystal Connect",
+  "assets": [
+    {
+      "$oid": "66aae9f8904497730a5487f3"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487f4"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487f5"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487f6"
+    },
+    {
+      "$oid": "66aae9f8904497730a5487f7"
+    }
+  ],
+  "category": "Mahjong & Connect",
+  "tags": [
+    "dragon",
+    "matching",
+    "pair",
+    "crystal",
+    "link",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "Azerion Casual Games",
+  "gameMd5": "1e0be8315c8d415aa5f0646f3f3fd577",
+  "description_vi": "Khám phá thế giới đầy mê hoặc của Crystal Connect, một trò chơi quyến rũ với đồ họa ngoạn mục! Tham gia cùng một cặp người lùn trong một nhiệm vụ hoành tráng để thu thập các tinh thể quý giá và vượt qua hàng chục cấp độ thử thách trong trò chơi phiêu lưu phong cách kết nối hấp dẫn này. Kết nối các cặp đá quý, tạo ra sự kết hợp mạnh mẽ và mở đường đến chiến thắng. Hòa mình vào cuộc phiêu lưu ngay hôm nay và khám phá sự kỳ diệu của Crystal Connect",
+  "created_at": {
+    "$date": "2024-08-01T01:50:49.075Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9f9904497730a54881b"
+  },
+  "slug": "anaconda-runner",
+  "title": "Anaconda Runner",
+  "description": "Anaconda Runner is a casual arcade game. In the snake kingdom, size is a status symbol. The bigger you are, the more powerful you are and the higher your status. So how do you increase your size?  There is a runway in front of you. There are many blue balls on the runway that can help you grow. See how far you can go, have fun!",
+  "assets": [
+    {
+      "$oid": "66aae9f9904497730a54880f"
+    },
+    {
+      "$oid": "66aae9f9904497730a548810"
+    },
+    {
+      "$oid": "66aae9f9904497730a548811"
+    },
+    {
+      "$oid": "66aae9f9904497730a548812"
+    },
+    {
+      "$oid": "66aae9f9904497730a548813"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "avoid",
+    "collect",
+    "runner",
+    "snake",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "4ef6c078512f4732acaaeda2d450aff8",
+  "description_vi": "Anaconda Runner là một game arcade thông thường. Trong vương quốc rắn, kích thước là biểu tượng của địa vị. Bạn càng lớn, bạn càng mạnh mẽ và địa vị của bạn càng cao. Vậy làm cách nào để tăng kích thước của bạn?  Có một đường băng ở phía trước của bạn. Có rất nhiều quả bóng màu xanh trên đường băng có thể giúp bạn phát triển. Hãy xem bạn có thể đi được bao xa, hãy vui vẻ!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:49.270Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fa904497730a54882d"
+  },
+  "slug": "dynamons-7",
+  "title": "Dynamons 7",
+  "description": "Embark on a brand new Dynamons adventure in Dynamons 7! This online monster collecting game includes two fresh areas to explore; Tall Pines world and the bonus cave.\n\nSeasoned Dynamons connoisseur Jovani will tell you everything you need to know to become a true Dynamon Captain. Encounter Crocynos, Huango, Cybeenyx, Aragonyx and many more special Dynamons. Recruit them for your team and beat others in thrilling 1v1 battles with special attacks and power-ups.",
+  "assets": [
+    {
+      "$oid": "66aae9f9904497730a548823"
+    },
+    {
+      "$oid": "66aae9f9904497730a548824"
+    },
+    {
+      "$oid": "66aae9f9904497730a548825"
+    },
+    {
+      "$oid": "66aae9f9904497730a548826"
+    },
+    {
+      "$oid": "66aae9f9904497730a548827"
+    }
+  ],
+  "category": "Adventure",
+  "tags": [
+    "collect",
+    "rpg",
+    "singleplayer",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "Azerion Casual Games",
+  "gameMd5": "724fead0a2f8417986c03173ea1ef35e",
+  "description_vi": "Bắt tay vào cuộc phiêu lưu Dynamons hoàn toàn mới trong Dynamons 7! Trò chơi thu thập quái vật trực tuyến này bao gồm hai khu vực mới để khám phá; Thế giới Tall Pines và hang thưởng.\n\nNgười sành sỏi về Dynamon dày dạn Jovani sẽ cho bạn biết mọi thứ bạn cần biết để trở thành Thuyền trưởng Dynamon thực thụ. Gặp Crocynos, Huango, Cybeenyx, Aragonyx và nhiều Dynamon đặc biệt khác. Tuyển dụng họ vào đội của bạn và đánh bại những người khác trong các trận chiến 1v1 gay cấn với các đòn tấn công đặc biệt và tăng sức mạnh.",
+  "created_at": {
+    "$date": "2024-08-01T01:50:50.121Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fb904497730a54883d"
+  },
+  "slug": "kids-coloring",
+  "title": "Kids Coloring",
+  "description": "Children adore entertaining coloring activities, and this Coloring Game stands out as one of the finest free coloring books and painting apps designed for kids!",
+  "assets": [
+    {
+      "$oid": "66aae9fb904497730a548833"
+    },
+    {
+      "$oid": "66aae9fb904497730a548834"
+    },
+    {
+      "$oid": "66aae9fb904497730a548835"
+    },
+    {
+      "$oid": "66aae9fb904497730a548836"
+    },
+    {
+      "$oid": "66aae9fb904497730a548837"
+    }
+  ],
+  "category": "Puzzle",
+  "tags": [],
+  "views": 0,
+  "company": "2Play",
+  "gameMd5": "1b8048385f8b4ee4a747cc4613a27606",
+  "description_vi": "Trẻ em yêu thích các hoạt động tô màu mang tính giải trí và Trò chơi tô màu này nổi bật là một trong những ứng dụng vẽ tranh và sách tô màu miễn phí hay nhất được thiết kế dành cho trẻ em!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:51.395Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fc904497730a54884f"
+  },
+  "slug": "bubble-shooter-hd-3",
+  "title": "Bubble Shooter HD 3",
+  "description": "Bubble Shooter HD 3 is the long-awaited third sequel to the the legendary Bubble Shooter game. Bubble Shooter HD 3 features the classic Bubble Shooter HD gameplay with a set of fresh new bubbles, the option to choose between the arrow vs pointer when shooting bubbles as well as the mighty BOMB feature that lets you blow up 15 bubbles at once. So what is the highest score you can achieve? Enjoy Bubble Shooter HD 3 now and break a new record!",
+  "assets": [
+    {
+      "$oid": "66aae9fb904497730a548845"
+    },
+    {
+      "$oid": "66aae9fb904497730a548846"
+    },
+    {
+      "$oid": "66aae9fb904497730a548847"
+    },
+    {
+      "$oid": "66aae9fb904497730a548848"
+    },
+    {
+      "$oid": "66aae9fb904497730a548849"
+    }
+  ],
+  "category": "Puzzle",
+  "tags": [
+    "bubble",
+    "bubble",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "SOFTGAMES – Mobile Entertainment Services GmbH",
+  "gameMd5": "03e358cc3331480795d74a55e4283686",
+  "description_vi": "Bubble Bắn Súng HD 3 là phần tiếp theo thứ ba được chờ đợi từ lâu của trò chơi bắn súng bong bóng huyền thoại. Bubble Bắn súng HD 3 có lối chơi Bubble Bắn súng HD cổ điển với một loạt bong bóng mới, tùy chọn để chọn giữa mũi tên và con trỏ khi bắn bong bóng cũng như tính năng BOMB mạnh mẽ cho phép bạn thổi bay 15 bong bóng cùng một lúc. Vậy số điểm cao nhất bạn có thể đạt được là bao nhiêu? Thưởng thức Bubble Shoot HD 3 ngay bây giờ và phá kỷ lục mới!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:52.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fc904497730a548860"
+  },
+  "slug": "beggar-clicker",
+  "title": "Beggar Clicker",
+  "description": "Beggar Clicker is a casual game. It is unimaginable that a beggar living on the street can make money so quickly. A few thousand dollars in just one minute. Just tap the screen to generate a steady stream of money. Enjoy!",
+  "assets": [
+    {
+      "$oid": "66aae9fc904497730a548856"
+    },
+    {
+      "$oid": "66aae9fc904497730a548857"
+    },
+    {
+      "$oid": "66aae9fc904497730a548858"
+    },
+    {
+      "$oid": "66aae9fc904497730a548859"
+    },
+    {
+      "$oid": "66aae9fc904497730a54885a"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "idle",
+    "upgrade",
+    "clicker",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "3e3bcab3e8a44bfda28560c038ff5976",
+  "description_vi": "Beggar Clicker là một trò chơi thông thường. Không thể tưởng tượng được một người ăn xin sống trên đường phố lại có thể kiếm tiền nhanh đến vậy. Vài ngàn đô la chỉ trong một phút. Chỉ cần chạm vào màn hình để tạo ra dòng tiền ổn định. Thưởng thức!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:52.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fc904497730a54886c"
+  },
+  "slug": "nose-hospital",
+  "title": "Nose Hospital",
+  "description": "\n In Nose Hospital Games, The patients are counting on you in this nose surgery hospital game. Will you rise to the occasion and become the hero in plastic surgery games, they desperately need? Step into the operating theater and redefine the world of nose plastic surgery games.\n",
+  "assets": [
+    {
+      "$oid": "66aae9fc904497730a548866"
+    },
+    {
+      "$oid": "66aae9fc904497730a548867"
+    },
+    {
+      "$oid": "66aae9fc904497730a548868"
+    }
+  ],
+  "category": "Care",
+  "tags": [
+    "doctor",
+    "hospital",
+    "surgery",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "BPTop",
+  "gameMd5": "867b8b1d8dbb494fb0f056328bbe792f",
+  "description_vi": "Trong Trò chơi Bệnh viện Mũi, Các bệnh nhân đang trông cậy vào bạn trong trò chơi bệnh viện phẫu thuật mũi này. Liệu bạn có nắm bắt được cơ hội và trở thành anh hùng trong trò chơi phẫu thuật thẩm mỹ mà họ rất cần không? Bước vào phòng mổ và định nghĩa lại thế giới trò chơi phẫu thuật thẩm mỹ mũi.",
+  "created_at": {
+    "$date": "2024-08-01T01:50:52.853Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fd904497730a548880"
+  },
+  "slug": "only-up",
+  "title": "Only Up",
+  "description": "Embark on an exhilarating journey from ground zero to the skies in Only Up! However, there's a twist – there are no checkpoints on this ascent. Stumble, and you must swiftly catch yourself to avoid losing precious progress. Will you conquer the summit, or succumb to the challenge and give up?",
+  "assets": [
+    {
+      "$oid": "66aae9fd904497730a548874"
+    },
+    {
+      "$oid": "66aae9fd904497730a548875"
+    },
+    {
+      "$oid": "66aae9fd904497730a548876"
+    },
+    {
+      "$oid": "66aae9fd904497730a548877"
+    },
+    {
+      "$oid": "66aae9fd904497730a548878"
+    },
+    {
+      "$oid": "66aae9fd904497730a548879"
+    }
+  ],
+  "category": "Adventure",
+  "tags": [
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "2Play",
+  "gameMd5": "ec5a0aa39f5c4cd19d1e6153de22650d",
+  "description_vi": "Bắt tay vào một cuộc hành trình thú vị từ mặt đất đến bầu trời trong Only Up! Tuy nhiên, có một điểm khác biệt là không có trạm kiểm soát nào trên chặng đi lên này. Vấp ngã, bạn phải nhanh chóng nắm bắt lấy bản thân để tránh đánh mất sự tiến bộ quý giá. Bạn sẽ chinh phục đỉnh cao hay khuất phục trước thử thách và bỏ cuộc?",
+  "created_at": {
+    "$date": "2024-08-01T01:50:53.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fd904497730a548890"
+  },
+  "slug": "bubble-letters",
+  "title": "Bubble Letters",
+  "description": "Dive into the enchanting realm of Bubble Letters, an immersive word game that takes players on an extraordinary journey through the world of letters. Featuring vibrant floral backgrounds and tranquil gameplay, this online crossword adventure is the ideal companion for warm days ahead! With thousands of levels to conquer, you're guaranteed endless brain-teasing enjoyment. Embark on a blooming linguistic adventure today!",
+  "assets": [
+    {
+      "$oid": "66aae9fd904497730a548886"
+    },
+    {
+      "$oid": "66aae9fd904497730a548887"
+    },
+    {
+      "$oid": "66aae9fd904497730a548888"
+    },
+    {
+      "$oid": "66aae9fd904497730a548889"
+    },
+    {
+      "$oid": "66aae9fd904497730a54888a"
+    }
+  ],
+  "category": "Puzzle",
+  "tags": [
+    "flowers",
+    "wordsearch",
+    "crossword",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "Azerion Casual Games",
+  "gameMd5": "365b4962c5894454ac7ac9e75ea0fb69",
+  "description_vi": "Đi sâu vào thế giới đầy mê hoặc của Bubble Letters, một trò chơi chữ hấp dẫn đưa người chơi vào một cuộc hành trình phi thường xuyên qua thế giới của các chữ cái. Với hình nền hoa rực rỡ và lối chơi yên tĩnh, cuộc phiêu lưu ô chữ trực tuyến này là người bạn đồng hành lý tưởng cho những ngày ấm áp phía trước! Với hàng nghìn cấp độ cần chinh phục, đảm bảo bạn sẽ có được niềm vui trí não vô tận. Bắt tay vào một cuộc phiêu lưu ngôn ngữ nở rộ ngay hôm nay!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:53.966Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fe904497730a5488a0"
+  },
+  "slug": "color-bump-dancer",
+  "title": "Color Bump Dancer",
+  "description": "Color Bump Dancer is a fun and casual puzzle game, with cool colors that greatly enhance the fun of the game. Various classic levels are waiting for you to pass, and there are also various gameplay options, don't miss the game!",
+  "assets": [
+    {
+      "$oid": "66aae9fe904497730a548896"
+    },
+    {
+      "$oid": "66aae9fe904497730a548897"
+    },
+    {
+      "$oid": "66aae9fe904497730a548898"
+    },
+    {
+      "$oid": "66aae9fe904497730a548899"
+    },
+    {
+      "$oid": "66aae9fe904497730a54889a"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "avoid",
+    "color",
+    "run",
+    "runner",
+    "reflex",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "aba20426b1944f499958439765a580d0",
+  "description_vi": "Color Bump Dancer là một trò chơi giải đố vui nhộn và thông thường, với màu sắc bắt mắt giúp nâng cao đáng kể sự thú vị của trò chơi. Nhiều cấp độ cổ điển khác nhau đang chờ bạn vượt qua và cũng có nhiều lựa chọn chơi trò chơi khác nhau, đừng bỏ lỡ trò chơi!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:54.494Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9fe904497730a5488ac"
+  },
+  "slug": "pop-adventure",
+  "title": "Pop Adventure",
+  "description": "Welcome to Pop Adventure, an addictive bubble shooter game that offers endless entertainment and relaxation to players of all ages. Match 3 balls to explode and clear all bubbles on the screen to complete the mission and win rewards",
+  "assets": [
+    {
+      "$oid": "66aae9fe904497730a5488a6"
+    },
+    {
+      "$oid": "66aae9fe904497730a5488a7"
+    },
+    {
+      "$oid": "66aae9fe904497730a5488a8"
+    }
+  ],
+  "category": "Bubble Shooter",
+  "tags": [
+    "bubble",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "Yizhiyuan Network Technology Co., Ltd.",
+  "gameMd5": "cf19c2cfc240400590a6415ff3256cf9",
+  "description_vi": "Chào mừng bạn đến với Pop Adventure, một trò chơi bắn bong bóng gây nghiện mang đến sự giải trí và thư giãn bất tận cho người chơi ở mọi lứa tuổi. Ghép 3 quả bóng để phát nổ và xóa tất cả bong bóng trên màn hình để hoàn thành nhiệm vụ và giành phần thưởng",
+  "created_at": {
+    "$date": "2024-08-01T01:50:54.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9ff904497730a5488be"
+  },
+  "slug": "idle-farm-1",
+  "title": "Idle Farm",
+  "description": "Run your own successful farm and build an empire! The more you grow and harvest, the more money you get!\nUse the money to upgrade your fields and make harvesting even more effective at producing food. Keep an eye on your production - with careful planning you’ll achieve everything! Expand your farm further and further until you truly own an empire.\nHire farm managers to do most of the work for you. Use their help to expand your farming empire, plant new crops and produce even more food!\n",
+  "assets": [
+    {
+      "$oid": "66aae9ff904497730a5488b4"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488b5"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488b6"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488b7"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488b8"
+    }
+  ],
+  "category": "Simulation",
+  "tags": [
+    "1player",
+    "farm",
+    "tycoon",
+    "clicker",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "Boombit S.A.",
+  "gameMd5": "1253e3f36b984801811d744f4db1125d",
+  "description_vi": "Điều hành trang trại thành công của riêng bạn và xây dựng một đế chế! Bạn càng trồng và thu hoạch, bạn càng nhận được nhiều tiền!\nSử dụng tiền để nâng cấp cánh đồng của bạn và làm cho việc thu hoạch trở nên hiệu quả hơn trong việc sản xuất thực phẩm. Hãy theo dõi quá trình sản xuất của bạn - với việc lập kế hoạch cẩn thận, bạn sẽ đạt được mọi thứ! Mở rộng trang trại của bạn ngày càng xa hơn cho đến khi bạn thực sự sở hữu một đế chế.\nThuê người quản lý trang trại để làm hầu hết công việc cho bạn. Sử dụng sự giúp đỡ của họ để mở rộng đế chế nông nghiệp của bạn, trồng cây mới và sản xuất nhiều lương thực hơn nữa!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:55.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aae9ff904497730a5488ce"
+  },
+  "slug": "planet-demolish",
+  "title": "Planet Demolish",
+  "description": "Planet Demolish is a fun simulation game. The universe is a mysterious existence. In the distant outer space, there are many asteroids. They reflect the light of the sun and are the stars we see in the night. Humans have discovered and named Mars, Mercury, Venus, Jupiter, etc.",
+  "assets": [
+    {
+      "$oid": "66aae9ff904497730a5488c4"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488c5"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488c6"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488c7"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488c8"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "destroy",
+    "fire",
+    "idle",
+    "rocket",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "c857cd8c65914a57abbffc2a4cd5c80b",
+  "description_vi": "Planet Demolish là một trò chơi mô phỏng thú vị. Vũ trụ là một sự tồn tại bí ẩn. Ở ngoài vũ trụ xa xôi, có rất nhiều tiểu hành tinh. Chúng phản chiếu ánh sáng mặt trời và là những ngôi sao chúng ta nhìn thấy trong đêm. Con người đã phát hiện và đặt tên cho Sao Hỏa, Sao Thủy, Sao Kim, Sao Mộc, v.v.",
+  "created_at": {
+    "$date": "2024-08-01T01:50:55.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aaea00904497730a5488de"
+  },
+  "slug": "real-freekick-3d-1",
+  "title": "Real Freekick 3D",
+  "description": "Immerse yourself in the intensity of Real Freekick 3D, a penalty shootout game where the championship's fate hangs on a nail-biting series of penalty shots. Select your preferred soccer team and progress to the finals. The pressure is on – make every shot count!",
+  "assets": [
+    {
+      "$oid": "66aae9ff904497730a5488d4"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488d5"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488d6"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488d7"
+    },
+    {
+      "$oid": "66aae9ff904497730a5488d8"
+    }
+  ],
+  "category": "Football",
+  "tags": [
+    "challenge",
+    "tournament",
+    "goalkeeper"
+  ],
+  "views": 0,
+  "company": "Agame",
+  "gameMd5": "527ae66f4e664fdc8847e7ce952165dc",
+  "description_vi": "Đắm chìm trong cường độ của Real Freekick 3D, một trò chơi loạt sút luân lưu trong đó số phận của nhà vô địch bị treo trên một loạt các cú sút phạt đền căng thẳng. Chọn đội bóng ưa thích của bạn và tiến tới trận chung kết. Áp lực đang tăng lên – hãy thực hiện từng cú đánh một cách có giá trị!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:56.169Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aaea00904497730a5488f0"
+  },
+  "slug": "wild-west-match",
+  "title": "Wild West Match",
+  "description": "Embark on a captivating Wild West adventure with Bonnnie! Explore iconic landscapes, face challenges, and uncover secrets in this thrilling journey. The frontier spirit awaits – join Bonnie on the quest for an unforgettable adventure!",
+  "assets": [
+    {
+      "$oid": "66aaea00904497730a5488e6"
+    },
+    {
+      "$oid": "66aaea00904497730a5488e7"
+    },
+    {
+      "$oid": "66aaea00904497730a5488e8"
+    },
+    {
+      "$oid": "66aaea00904497730a5488e9"
+    },
+    {
+      "$oid": "66aaea00904497730a5488ea"
+    }
+  ],
+  "category": "Puzzle",
+  "tags": [
+    "western",
+    "Kids Friendly",
+    "No Blood"
+  ],
+  "views": 0,
+  "company": "SOFTGAMES – Mobile Entertainment Services GmbH",
+  "gameMd5": "39fad6763e9b4d4da0558fd7644ef798",
+  "description_vi": "Bắt tay vào cuộc phiêu lưu miền Tây hoang dã quyến rũ cùng Bonnie! Khám phá những cảnh quan mang tính biểu tượng, đối mặt với thử thách và khám phá những bí mật trong cuộc hành trình ly kỳ này. Tinh thần biên cương đang chờ đợi – hãy cùng Bonnie thực hiện hành trình tìm kiếm một cuộc phiêu lưu khó quên!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:56.457Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aaea00904497730a548900"
+  },
+  "slug": "wired-chicken-inc",
+  "title": "Wired Chicken Inc",
+  "description": "Wired Chicken Inc is a fun casual game on yad.com. Do you dream of being a relaxed and free farmer and managing your farm? In this game, you can realize your dreams. At the beginning of the game, you only have one duck egg. The duck egg hatches a duckling, and the duckling then produces a duck egg. See what you can get in the last, enjoy!",
+  "assets": [
+    {
+      "$oid": "66aaea00904497730a5488f6"
+    },
+    {
+      "$oid": "66aaea00904497730a5488f7"
+    },
+    {
+      "$oid": "66aaea00904497730a5488f8"
+    },
+    {
+      "$oid": "66aaea00904497730a5488f9"
+    },
+    {
+      "$oid": "66aaea00904497730a5488fa"
+    }
+  ],
+  "category": "Casual",
+  "tags": [
+    "business",
+    "chicken",
+    "cute",
+    "idle",
+    "relaxing",
+    "Kids Friendly",
+    "No Blood",
+    "No Cruelty"
+  ],
+  "views": 0,
+  "company": "YAD.Com",
+  "gameMd5": "5ebfe3bd063045d2a8c8e6e1f0d6299e",
+  "description_vi": "Wired Chicken Inc là một trò chơi thông thường thú vị trên yad.com. Bạn có mơ ước trở thành một nông dân thoải mái và tự do và quản lý trang trại của mình không? Trong trò chơi này, bạn có thể thực hiện ước mơ của mình. Khi bắt đầu trò chơi, bạn chỉ có một quả trứng vịt. Trứng vịt nở ra vịt con, vịt con sinh ra trứng vịt. Xem những gì bạn có thể nhận được cuối cùng, hãy tận hưởng!",
+  "created_at": {
+    "$date": "2024-08-01T01:50:56.832Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66aaeba03f3064cdc165e30d"
+  },
+  "slug": "clumsy-bird-master",
+  "title": "clumsy-bird-master",
+  "description": "clumsy-bird-master",
+  "assets": [],
+  "embed": "http://localhost:5000/games/clumsy-bird-master",
+  "category": "1",
+  "tags": [],
+  "views": 2,
+  "company": "1",
+  "gameMd5": "clumsy-bird-master",
+  "isServer": true,
+  "created_at": {
+    "$date": "2024-08-01T01:57:52.973Z"
+  },
+  "__v": 0
+}]

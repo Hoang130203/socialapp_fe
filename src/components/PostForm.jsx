@@ -7,6 +7,7 @@ import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import PostModel from "./models/PostModel";
 import { motion } from "framer-motion";
 import { faker } from "@faker-js/faker";
+import { postApi } from "../api";
 
 // type PostFormProps = {
 //   isShow: boolean;
@@ -20,23 +21,47 @@ const PostForm = ({ userData, isShow }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
 
-  const click = () => {
+  const handleCreatePost = async (caption, image) => {
+    try {
+      // Prepare post data
+      const postData = {
+        content: caption,
+        mediaUrls: image ? [image] : [], // Add image if available
+        visibility: 0, // Public by default
+        type: 0 // Normal post
+      };
 
+      // Call the API to create post
+      const response = await postApi.createPost(postData);
+
+      // Handle successful post creation
+      if (response) {
+        // Close the post modal
+        setOpen(false);
+        // You might want to refresh the feed or add the new post to existing posts
+        // Could emit an event or call a callback function passed as prop
+      }
+    } catch (error) {
+      console.error("Error creating post:", error);
+      // Show error message to user
+      alert("Failed to create post. Please try again.");
+    }
   };
-
+  const click = () => {
+  }
   return (
     <div className="px-4 mt-4 shadow rounded-lg bg-white dark:bg-[#28282B]">
       <div className="p-2 border-b border-gray-300 dark:border-dark-third flex space-x-4">
         {isShow ? (
           <img
             onClick={click}
-            src={user?.photoURL}
+            src={user?.profilePictureUrl}
             alt="Profile picture"
             className="w-10 h-10 rounded-full cursor-pointer object-cover"
           />
         ) : (
           <img
-            src={userData.profileImage}
+            src={user?.profilePictureUrl}
             alt="Profile picture"
             className="w-10 h-10 rounded-full object-cover"
           />
@@ -46,7 +71,7 @@ const PostForm = ({ userData, isShow }) => {
           onClick={handleOpen}
           className="flex-1 bg-gray-100 rounded-full flex items-center justify-start pl-4 cursor-pointer dark:bg-gray-600 dark:text-gray-300 text-gray-500 text-lg"
         >
-          <span>Hoàng ơi, bạn đang nghĩ gì thế?</span>
+          <span>{user?.fullName || 'Bạn'} ơi, bạn đang nghĩ gì thế?</span>
         </div>
       </div>
       <div className="p-2 flex">
@@ -84,7 +109,7 @@ const PostForm = ({ userData, isShow }) => {
           </span>
         </motion.div>
       </div>
-      <PostModel setOpen={setOpen} open={open} />
+      <PostModel setOpen={setOpen} open={open} onCreatePost={handleCreatePost} />
     </div>
   );
 };

@@ -30,7 +30,7 @@ const MainContent = () => {
       <div className="w-1/4 sm:w-1/6 h-44 rounded-xl shadow overflow-hidden flex flex-col group cursor-pointer">
         <div className="h-3/4 overflow-hidden">
           <img
-            src={user?.photoURL}
+            src={user?.profilePictureUrl}
             alt="picture"
             className="group-hover:transform group-hover:scale-110 transition-all duration-700 h-full object-cover"
           />

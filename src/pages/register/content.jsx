@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { TEInput, TERipple } from "tw-elements-react";
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
-
+import { authApi } from '../../api';
 export default function BasicExample() {
+    const [formData, setFormData] = useState({
+        email: '',
+        username: '',
+        password: '',
+        confirmPassword: '',
+        fullName: '',
+    });
+    const [loading, setLoading] = useState(false);
+    const handleRegister = async () => {
+        try {
+            // Validate passwords match
+            if (formData.password !== formData.confirmPassword) {
+                alert("Mật khẩu không khớp!");
+                return;
+            }
+
+            // Call register API
+            const response = await authApi.register(
+                formData.email,
+                formData.username,
+                formData.password,
+                formData.fullName,
+                2 // Default user type
+            );
+
+            if (response) {
+                // Registration successful
+                alert("Đăng ký thành công!");
+                // Redirect to login page
+                navigate('/login');
+            }
+        } catch (error) {
+            console.error("Registration failed:", error);
+            // alert("Đăng ký thất bại. Vui lòng thử lại!");
+        }
+    }
+
     return (
         <section className="h-screen p-[5%] bg-[#f7f7f7] dark:bg-[#18191a]">
             <div className="h-full">
@@ -89,17 +126,34 @@ export default function BasicExample() {
                             {/* <!-- Email input --> */}
                             <TEInput
                                 type="email"
-                                label="Địa chỉ email/ Số điện thoại / Tên đăng nhập"
+                                label="Địa chỉ email"
                                 size="lg"
                                 className="mb-6"
+                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             ></TEInput>
 
-                            {/* <!--Password input--> */}
+                            <TEInput
+                                type="text"
+                                label="Tên đăng nhập"
+                                size="lg"
+                                className="mb-6"
+                                onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+                            ></TEInput>
+
+                            <TEInput
+                                type="text"
+                                label="Họ và tên"
+                                size="lg"
+                                className="mb-6"
+                                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                            ></TEInput>
+
                             <TEInput
                                 type="password"
                                 label="Mật khẩu"
                                 className="mb-6"
                                 size="lg"
+                                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                             ></TEInput>
 
                             <TEInput
@@ -107,6 +161,7 @@ export default function BasicExample() {
                                 label="Nhập lại mật khẩu"
                                 className="mb-6"
                                 size="lg"
+                                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
                             ></TEInput>
                             <div className="mb-6 flex items-center justify-between">
                                 {/* <!-- Remember me checkbox --> */}
@@ -135,8 +190,10 @@ export default function BasicExample() {
                                     <button
                                         type="button"
                                         className="inline-block rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                                        onClick={handleRegister}
+
                                     >
-                                        Register
+                                        Đăng ký
                                     </button>
                                 </TERipple>
 
