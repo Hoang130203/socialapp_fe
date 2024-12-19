@@ -28,8 +28,14 @@ const Content = () => {
                 localStorage.setItem('token', response.token);
                 // Store user info
                 localStorage.setItem('user', JSON.stringify(response.userProfile));
-                // Redirect to home page
-                window.location.href = "/";
+                if (emailOrPhone?.includes("business")) {
+                    window.location.href = '/business'
+                } else if (emailOrPhone?.includes("admin")) {
+                    window.location.href = '/admin'
+                } else {
+                    // Redirect to home page
+                    window.location.href = "/";
+                }
             }
         } catch (error) {
             // Handle login error

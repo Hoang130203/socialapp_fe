@@ -13,3 +13,5 @@ export const MESSAGES = '/messages';
 export const FRIENDS = '/friends';
 export const GROUP_MANAGEMENT = '/groups/manage/:id';
 export const GAME_DETAIL = '/games/:slug';
+export const BUSINESS = '/business';
+export const SYSTEM_ADMIN = '/admin';

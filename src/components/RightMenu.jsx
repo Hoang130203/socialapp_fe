@@ -3,13 +3,24 @@ import React, { useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { businessApi } from "../api";
 
 
 
 const RightMenu = ({ isMessenger }) => {
   const [suggestions, setSuggestions] = useState([]);
+  const [Ads, setAds] = useState([]);
+  const fetchAds = async () => {
+    try {
+      const response = await businessApi.getRandom();
+      setAds(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
+    fetchAds();
     const suggestions = [...Array(6)].map((_, i) => ({
       userId: faker.string.uuid(),
       username: faker.internet.userName(),
@@ -43,21 +54,20 @@ const RightMenu = ({ isMessenger }) => {
                   className="w-8 h-8 rounded-full object-cover"
                 />
                 <div className="dark:text-dark-txt">
-                  <span className="font-semibold">Apple</span>
+                  <span className="font-semibold">{Ads?.title}</span>
                 </div>
               </div>
             </div>
             <div className="cursor-pointer">
               <div className="flex-1 space-x-2 mt-2">
                 <p>
-                  Apple được cho là đã điều chỉnh lại mục tiêu sản xuất iPhone 14 sau
-                  nhu cầu chậm...
+                  {Ads?.content?.slice(0, 300)} {Ads?.content?.length > 300 && "..."}
                 </p>
               </div>
               <div className="mb-8">
                 <img
                   className="rounded-xl"
-                  src="https://fs.npstatic.com/userfiles/7687254/image/NextPit-Apple-iPhone-14-Plus-vs-iPhone-14-Pro-Max-w810h462.jpg"
+                  src={Ads?.mediaUrl || "https://fs.npstatic.com/userfiles/7687254/image/NextPit-Apple-iPhone-14-Plus-vs-iPhone-14-Pro-Max-w810h462.jpg"}
                 />
               </div>
             </div>

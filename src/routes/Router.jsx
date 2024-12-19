@@ -15,6 +15,7 @@ import PageNotFound from '../pages/notfound/index';
 // import WatchPage from '../pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 import {
+    BUSINESS,
     CREATE_GROUP,
     FRIENDS,
     GAME_DETAIL,
@@ -29,6 +30,7 @@ import {
     PROFILE,
     REGISTER,
     SAVED_VIDEOS,
+    SYSTEM_ADMIN,
     WATCH,
 } from './routes';
 import Home from '../pages/home';
@@ -47,6 +49,8 @@ import GroupDetail from '../pages/groups/detail';
 import FriendsTab from '../pages/friends/FriendsTab';
 import GroupManagement from '../pages/groups/manage/GoupManagement';
 import GameDetail from '../pages/gaming/GameDetail';
+import BusinessAdForm from '../pages/business/BusinessAdForm';
+import AdminApprovalForm from '../pages/adminsystem/AdminApprovalForm';
 
 const Routers = () => {
     return (
@@ -122,6 +126,16 @@ const Routers = () => {
             <Route path={GAME_DETAIL} element={
                 <PrivateRoute layout={ProfilePageLayout}>
                     <GameDetail />
+                </PrivateRoute>
+            } />
+            <Route path={BUSINESS} element={
+                <PrivateRoute layout={ProfilePageLayout}>
+                    <BusinessAdForm />
+                </PrivateRoute>
+            } />
+            <Route path={SYSTEM_ADMIN} element={
+                <PrivateRoute layout={ProfilePageLayout}>
+                    <AdminApprovalForm />
                 </PrivateRoute>
             } />
             <Route path="*" element={<PageNotFound />} />

@@ -459,3 +459,55 @@ export const messageApi = {
         }
     }
 };
+//business api
+export const businessApi = {
+    postAd: async (formData) => {
+        try {
+            const response = await axios.post(
+                `${BASE_URL}/advertisements`,
+                formData,
+                getAuthHeader()
+            );
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+    getRandom: async () => {
+        try {
+            const response = await axios.get(
+                `${BASE_URL}/advertisements/random`,
+                getAuthHeader()
+            );
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+};
+//admin system api
+export const adminSystemApi = {
+    approveRequest: async (adId, formData) => {
+        try {
+            const response = await axios.put(
+                `${BASE_URL}/advertisements/${adId}/review`,
+                formData,
+                getAuthHeader()
+            );
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    },
+    getListRequest: async () => {
+        try {
+            const response = await axios.get(
+                `${BASE_URL}/advertisements?status=0`,
+                getAuthHeader()
+            );
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+};
